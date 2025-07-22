@@ -26,8 +26,3 @@ std::string TimeStamp::toString() const
     );
     return buf;
 }
-
-int main()
-{
-    std::cout << TimeStamp::now().toString() <<std::endl;
-}
