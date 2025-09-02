@@ -6,7 +6,7 @@
 
 namespace dblogger
 {
-//Formatter用于设置日志的格式，此处固定格式，不支持拓展
+/// @brief Formatter用于设置日志的格式，此处固定格式，不支持拓展
 class Formatter
 {
 public:

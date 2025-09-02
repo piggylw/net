@@ -3,7 +3,7 @@
 
 namespace dblogger
 {
-
+/// @brief 日志等级类
 class LogLevel
 {
 public:

@@ -6,7 +6,7 @@
 
 namespace dblogger
 {
-
+/// @brief Logger是日志的核心类，包含了日志名，日志权限，日志格式化器，日志输出接口等
 class Logger
 {
 public:

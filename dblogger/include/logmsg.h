@@ -7,7 +7,7 @@
 
 namespace dblogger
 {
-
+/// @brief 日志消息类，包含了日志的所有信息
 struct LogMsg
 {
     time_t m_time;
