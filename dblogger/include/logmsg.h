@@ -28,10 +28,10 @@ struct LogMsg
         const std::string& other
     ):  m_time(Date::now()),
         m_level(level),
-        m_loggerName(loggerName),
+        m_loggerName(std::move(loggerName)),
         m_tid(std::this_thread::get_id()),
-        m_fileName(fileName),
-        m_functionName(functionName),
+        m_fileName(std::move(fileName)),
+        m_functionName(std::move(functionName)),
         m_line(line),
         m_other(other)
         {}

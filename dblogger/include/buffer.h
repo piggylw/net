@@ -8,7 +8,7 @@ namespace dblogger
 // 缓冲区默认大小
 const size_t defaultBufferSize = 1 * 1024 * 1024;
 // 阈值
-const size_t threshold = 2 * 1024 * 1024;
+const size_t threshold = 4 * 1024 * 1024;
 // 大于阈值以后每次扩容的自增值
 const size_t increament = 1 * 1024 * 1024;
 
@@ -79,6 +79,16 @@ public:
         m_buffer.swap(buf.m_buffer);
         std::swap(m_readIdx, buf.m_readIdx);
         std::swap(m_writeIdx, buf.m_writeIdx);
+    }
+
+    size_t size()
+    {
+        return m_buffer.size();
+    }
+
+    bool isEmpty() const
+    {
+        return m_readIdx == m_writeIdx;
     }
 
 private:
